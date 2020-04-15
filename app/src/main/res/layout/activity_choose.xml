@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Choose"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:layout_editor_absoluteY="81dp">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/second"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+    <TextView
+        android:id="@+id/wlcmsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:textSize="50dp"
+        android:textColor="#ffffff"
+        android:text="Welcome:" />
+    <Button
+        android:id="@+id/search"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bground"
+        android:onClick="search"
+        android:text="Search"
+        />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:background="@drawable/bground"
+        android:layout_marginBottom="20dp"
+        android:onClick="bookIssue"
+        android:text="ISSUE"
+        />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bground"
+        android:onClick="bookreturn"
+        android:text="Return"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/feedback"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:background="@drawable/bground"
+        android:onClick="feedback"
+        android:text="Feedback"
+        android:layout_marginBottom="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/faqs"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bground"
+        android:onClick="faqs"
+        android:text="Faqs"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/button8"
+        android:text="log out"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="logOut"
+        android:background="@drawable/bground"
+        />
+    </LinearLayout>
+</RelativeLayout>

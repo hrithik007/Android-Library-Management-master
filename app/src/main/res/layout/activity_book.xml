@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Layout for a list of books -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:layout_margin="4dp">
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/second"
+        android:scaleType="centerCrop"/>
+
+    <SearchView
+        android:background="@drawable/edit_text_border"
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search Book" />
+
+
+
+    <LinearLayout
+        android:id="@+id/check"
+        android:layout_below="@id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <CheckBox
+            android:buttonTint="#FF9800"
+            android:textColor="#FF9800"
+            android:layout_below="@id/search_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:paddingLeft="0dp"
+            android:textSize="16sp"
+            android:id="@+id/books_checkbox"
+            android:layout_marginRight="20dp"
+            android:onClick="onBookCheck"
+            android:checked="true"
+            />
+        <CheckBox
+            android:buttonTint="#FF9800"
+            android:layout_toRightOf="@id/books_checkbox"
+            android:layout_below="@id/search_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF9800"
+            android:text="Author"
+            android:paddingLeft="0dp"
+            android:textSize="16sp"
+            android:id="@+id/author_checkbox"
+            android:onClick="onAuthorCheck"
+            />
+    </LinearLayout>
+    <TextView
+        android:gravity="center"
+        android:id="@+id/text1"
+        android:textColor="#ffffff"
+        android:text="What am I Searching?"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:textSize="30sp"
+        android:layout_below="@id/check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="40dp"
+        />
+    <TextView
+        android:textSize="30sp"
+        android:id="@+id/text2"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="35dp"
+        android:textStyle="italic"
+        android:layout_below="@id/text1"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:text="It searches the full text of books and magazines that Google has scanned,converted to text using optical character recognition(OCR),and stored in its digital database.  "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/check"
+        android:orientation="vertical" />
+
+
+    <!-- Empty view is only visible when the list has no items. -->
+    <TextView
+        android:textColor="#ffffff"
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+
+
+</RelativeLayout>
